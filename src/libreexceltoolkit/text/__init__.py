@@ -1,12 +1,10 @@
-if __name__ == "__main__":
+'''
+text functions and reusable text processing engine.
+'''
 
-    from engine import find_delimiter
-    test_text = "Hello!, harshit"
-    
-    result = find_delimiter(
-        text=test_text,
-        delimiter="!",
-        instance=1,
-        case_sensitive=True
-        )
-    print(f'result : {result} {len(test_text)}' )
+from .engine import DelimiterMatch, find_delimiter
+
+__all__ = [
+    "DelimiterMatch",
+    "find_delimiter",
+    ]
